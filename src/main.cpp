@@ -40,7 +40,7 @@ CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // "standard" scrypt target limit
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16);
 
-unsigned int nTargetSpacing = 1 * 30; // 30 seconds
+unsigned int nTargetSpacing = 1 * 60; // 60 seconds
 unsigned int nStakeMinAge = 10 * 60 * 60; // 10 hour
 unsigned int nStakeMaxAge = -1;           //unlimited
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
@@ -966,14 +966,187 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
-    int64_t nSubsidy = 1500 * COIN;
+    int64_t nSubsidy = 2000 * COIN;
     
-    if (pindexBest->nHeight<= 100)
+    if (pindexBest->nHeight <= 21600)
     {
-      nSubsidy = 1 * COIN;
-      return nSubsidy + nFees;
+      nSubsidy = 100000 * COIN;
+    }
+
+    if (pindexBest->nHeight > 21660 && pindexBest->nHeight <= 36000)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+
+    if (pindexBest->nHeight > 64800 && pindexBest->nHeight <= 79200)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+
+    if (pindexBest->nHeight > 108000 && pindexBest->nHeight <= 122400)
+    {
+      nSubsidy = 20000 * COIN;
     }
     
+    if (pindexBest->nHeight > 151200 && pindexBest->nHeight <= 165600)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 194400 && pindexBest->nHeight <= 208800)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 237600 && pindexBest->nHeight <= 252000)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 280800 && pindexBest->nHeight <= 295200)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 324000 && pindexBest->nHeight <= 338400)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 367200 && pindexBest->nHeight <= 381600)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 410400 && pindexBest->nHeight <= 424800)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 453600 && pindexBest->nHeight <= 468000)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 496800 && pindexBest->nHeight <= 511200)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 540000 && pindexBest->nHeight <= 554400)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 583200 && pindexBest->nHeight <= 597600)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 626400 && pindexBest->nHeight <= 640800)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 669600 && pindexBest->nHeight <= 684000)
+    {
+      nSubsidy = 20000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 712800 && pindexBest->nHeight <= 1058400)
+    {
+      nSubsidy = 5000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 1058400 && pindexBest->nHeight <= 1072800)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 1576800 && pindexBest->nHeight <= 1591200)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 2095200 && pindexBest->nHeight <= 2109600)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 2613600 && pindexBest->nHeight <= 2628000)
+    {
+      nSubsidy = 50000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 3132000 && pindexBest->nHeight <= 3146400)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 3650400 && pindexBest->nHeight <= 3664800)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 4168800 && pindexBest->nHeight <= 4183200)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 4687200 && pindexBest->nHeight <= 4701600)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 5205600 && pindexBest->nHeight <= 5220000)
+    {
+      nSubsidy = 50000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 5724000 && pindexBest->nHeight <= 5738400)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 6242400 && pindexBest->nHeight <= 6256800)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 6760800 && pindexBest->nHeight <= 6775200)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 7279200 && pindexBest->nHeight <= 7293600)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 7797600 && pindexBest->nHeight <= 7812000)
+    {
+      nSubsidy = 50000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 8316000 && pindexBest->nHeight <= 8330400)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 8834400 && pindexBest->nHeight <= 8848800)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 9352800 && pindexBest->nHeight <= 9367200)
+    {
+      nSubsidy = 10000 * COIN;
+    }
+    
+    if (pindexBest->nHeight > 9871200 && pindexBest->nHeight <= 9885600)
+    {
+      nSubsidy = 10000 * COIN;
+    }
 	
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfWorkReward() : create=%s nSubsidy=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nSubsidy);
