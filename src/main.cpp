@@ -2663,7 +2663,7 @@ bool LoadBlockIndex(bool fAllowNew)
         if (!fAllowNew)
             return false;
 
-        const char* pszTimestamp = "06/09";
+        const char* pszTimestamp = "07/07";
         CTransaction txNew;
         txNew.nTime = 1402346000;
         txNew.vin.resize(1);
@@ -2675,7 +2675,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1402346011;
+        block.nTime    = 1404763413;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
         block.nNonce   = 1912748;
 		if(fTestNet)
