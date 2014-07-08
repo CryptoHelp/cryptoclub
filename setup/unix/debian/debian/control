@@ -1,7 +1,7 @@
-Source: minerals
+Source: cryptoclub
 Section: misc
 Priority: extra
-Maintainer: Minerals <dev@minerals.pro>
+Maintainer: CryptoClub <cryptoclub@gmx.fr>
 Build-Depends: debhelper (>= 5),
 	libminiupnpc-dev,
 	libdb++-dev,
@@ -9,9 +9,9 @@ Build-Depends: debhelper (>= 5),
 	qt5-default, qttools5-dev-tools,
 	desktop-file-utils, 
 Standards-Version: 3.8.3
-Homepage: http://minerals.pro/
+Homepage: http://cryptoclub.pro/
 
-Package: minerals
+Package: cryptoclub
 Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Minerals Wallet
+Description: CryptoClub Wallet

@@ -17,7 +17,7 @@
 export DH_OPTIONS
 
 #export DH_COMPAT=5
-export PACKAGE=minerals
+export PACKAGE=cryptoclub
 export BUILD_ROOT=%BUILD_ROOT%
 export rootdir=%rootdir%
 export JFLAG=%JFLAG%
@@ -42,7 +42,7 @@ configure-stamp:
 	dh_testdir
 	# Add here commands to configure the package.
 #	test -f $(rootdir)/dont_configure || ( cd $(BUILD_ROOT) && $(SH) ./configure.sh )
-	qmake -r /mnt/projects/Minerals/Minerals-qt.pro
+	qmake -r /mnt/projects/CryptoClub/CryptoClub-qt.pro
 	touch configure-stamp
 
 
@@ -126,7 +126,7 @@ binary-common:
 	dh_makeshlibs
 	dh_installdeb
 # Excluding qt opengl because custom qt builds sometimes links with vendor openg lib.
-	dh_shlibdeps -L$(PACKAGE) -l${PWD}/debian/$(PACKAGE)$(_libdir)/$(PACKAGE)/Minerals-qt
+	dh_shlibdeps -L$(PACKAGE) -l${PWD}/debian/$(PACKAGE)$(_libdir)/$(PACKAGE)/CryptoClub-qt
 # -X libQtOpenGL.so.*
 	dh_gencontrol
 	dh_md5sums
